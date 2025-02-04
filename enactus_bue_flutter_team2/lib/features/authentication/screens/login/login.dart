@@ -1,0 +1,178 @@
+import 'package:flutter/material.dart';
+
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(40),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // Header Section
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Positioned(
+                    left: 24,
+                    child:
+                      Image(
+                        height: 150,
+                        
+                        image: AssetImage('assets/icons/logo.png'),
+                      ),
+                  ),
+                  SizedBox(height: 12,),
+                  
+                  Text(
+                    "Welcome Back",
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    "Welcome to a World of Limitless choices - Your perfect product Awaits",
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                ],
+              ),
+
+              // Login Form
+              Form(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  child: Column(
+                    children: [
+                      // Email Input
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          prefixIcon: Icon(Icons.mail_lock),
+                          labelText: "Email",
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+
+                      // Password Input
+                      TextFormField(
+                        decoration: const InputDecoration(
+                          prefixIcon: Icon(Icons.password),
+                          labelText: "Password",
+                          suffixIcon: Icon(Icons.remove_red_eye_rounded),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+
+                      // Remember Me and Forgot Password
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(value: true, onChanged: (value) {}),
+                              const Text("Remember me"),
+                            ],
+                          ),
+                          TextButton(
+                            onPressed: () => Navigator.of(context).pushNamed('/forget_password'),
+                            child: const Text("Forget Password"),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 32),
+
+                      // Sign In Button
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: () => Navigator.of(context).pushNamed('/home_screen'),
+                          child: Text("Sign In"),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      // Create Account Button
+                      SizedBox(
+                        width: double.infinity,
+                        child: OutlinedButton(
+                          onPressed: () => Navigator.of(context).pushNamed('/sign_up'),
+                          child: Text("Create Account"),
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                    ],
+                  ),
+                ),
+              ),
+
+              // Divider with "Or Sign in with"
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: Divider(
+                      color: Colors.grey,
+                      thickness: 0.5,
+                      indent: 60,
+                      endIndent: 5,
+                    ),
+                  ),
+                  Text(
+                    "or Sign In With",
+                    style: Theme.of(context).textTheme.labelMedium,
+                  ),
+                  Flexible(
+                    child: Divider(
+                      color: Colors.grey,
+                      thickness: 0.5,
+                      indent: 5,
+                      endIndent: 60,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+
+              // Social Media Buttons
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Image(
+                        width: 16,
+                        height: 16,
+                        image: AssetImage("assets/logos/google.png"),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Image(
+                        width: 16,
+                        height: 16,
+                        image: AssetImage("assets/logos/facebook.png"),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
