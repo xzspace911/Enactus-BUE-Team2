@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:iconsax/iconsax.dart';
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
 
@@ -29,12 +29,13 @@ class ForgetPassword extends StatelessWidget {
           ///  Text Field
           TextFormField(
             decoration: const InputDecoration(
+              border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
               labelText: "Email",
-              prefixIcon: Icon(Icons.send),
+              prefixIcon: Icon(Iconsax.personalcard),
               
             ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 12),
 
 
 
@@ -43,7 +44,19 @@ class ForgetPassword extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(onPressed: ()=> Navigator.of(context).pushNamed('/reset_password'),
-             child:const Text("Submit"),),
+            style: ButtonStyle(
+                            backgroundColor: WidgetStateProperty.all(Colors.blue),
+                            shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+
+                          ),
+             child:const Text("Submit",
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                color: Colors.white,),
+             ),
+              
+             ),
              
              
              ),

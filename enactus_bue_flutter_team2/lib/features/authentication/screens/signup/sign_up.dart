@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -31,8 +32,9 @@ class SignupScreen extends StatelessWidget {
                               child: TextFormField(
                                 expands : false,
                                 decoration: const InputDecoration(
+                                  border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                                   labelText: "First Name",
-                                  prefixIcon: Icon(Icons.person),
+                                  prefixIcon: Icon(Iconsax.user),
                                 ),
                               ),
                             ),
@@ -42,8 +44,9 @@ class SignupScreen extends StatelessWidget {
                               child: TextFormField(
                                 expands : false,
                                 decoration: const InputDecoration(
+                                  border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                                   labelText: "Last Name",
-                                  prefixIcon: Icon(Icons.person),
+                                  prefixIcon: Icon(Iconsax.user),
                                 ),
                               ),
                             ),
@@ -58,8 +61,9 @@ class SignupScreen extends StatelessWidget {
                         TextFormField(
                           expands : false,
                           decoration: const InputDecoration(
+                            border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                             labelText: "Username",
-                            prefixIcon: Icon(Icons.person_2_rounded),
+                            prefixIcon: Icon(Iconsax.user_tag),
                           ),
                         ),
                         //=============== Mail =======================
@@ -67,8 +71,9 @@ class SignupScreen extends StatelessWidget {
                         TextFormField(
                           expands : false,
                           decoration: const InputDecoration(
+                            border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                             labelText: "Email",
-                            prefixIcon: Icon(Icons.mail),
+                            prefixIcon: Icon(Iconsax.personalcard),
                           ),
                         ),
                         //=============== Phone =======================
@@ -76,8 +81,9 @@ class SignupScreen extends StatelessWidget {
                         TextFormField(
                           expands : false,
                           decoration: const InputDecoration(
+                            border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                             labelText: "Phone Number",
-                            prefixIcon: Icon(Icons.call),
+                            prefixIcon: Icon(Iconsax.call),
                           ),
                         ),
                         //=============== Password =======================
@@ -85,12 +91,13 @@ class SignupScreen extends StatelessWidget {
                         TextFormField(
                           expands : false,
                           decoration: const InputDecoration(
+                            border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                             labelText: "Password",
-                            prefixIcon: Icon(Icons.password),
-                            suffixIcon: Icon(Icons.remove_red_eye),
+                            prefixIcon: Icon(Iconsax.password_check),
+                            suffixIcon: Icon(Iconsax.eye_slash),
                           ),
                         ),
-                        const SizedBox(height: 8),
+                        const SizedBox(height: 16),
 
                         //=============== Terms&Conditional CheckBox =======================
                         Row(
@@ -103,7 +110,7 @@ class SignupScreen extends StatelessWidget {
                             const SizedBox(width: 8),
                             Text.rich(TextSpan(
                               children: [
-                                TextSpan(text: '${"I Agree to "}  ',
+                                TextSpan(text: '${"I Agree to"}  ',
                                   style: Theme.of(context).textTheme.bodySmall,
                                 ),
 
@@ -133,10 +140,23 @@ class SignupScreen extends StatelessWidget {
                           ],
                         ),
                         ///Sign up button
-                        const SizedBox(height: 24),
-                        SizedBox(width: double.infinity, child: ElevatedButton(
+                        const SizedBox(height: 30),
+                        SizedBox(
+                          width: double.infinity,
+                          height: 45,
+                        
+                         child: ElevatedButton(
                             onPressed: ()=>{},
-                            child: const Text("Create Account"))),
+                            style: ButtonStyle(
+                              backgroundColor: WidgetStateProperty.all(Colors.blue),
+                              shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+                            ),
+                            child: const Text("Create Account",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),),
+                            
+                            )),
                         const SizedBox(height: 8),
                         /// Divider
 

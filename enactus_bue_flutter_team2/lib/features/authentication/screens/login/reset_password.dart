@@ -8,7 +8,7 @@ class ResetPassword extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        
+        backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -16,10 +16,6 @@ class ResetPassword extends StatelessWidget {
           child: Column(
             children: [
                     //===================Image====================//
-
-                    // Image(image : AssetImage("assets/images/success.gif"), 
-                    //   width: 250,
-                    // ),
                     Image(image:AssetImage('assets/icons/email.gif'),
                       height: 250,
                       width: 250,
@@ -32,7 +28,7 @@ class ResetPassword extends StatelessWidget {
                     Text("Change Your Password",style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center),
                     const SizedBox(height: 8),
 
-                    Text('support@codingwitht.com',style: Theme.of(context).textTheme.labelLarge,textAlign: TextAlign.center),
+                    Text('support@codingwithme.com',style: Theme.of(context).textTheme.labelLarge,textAlign: TextAlign.center),
                     const SizedBox(height: 8),
 
                     Text("Your Account security is our priority! , We've sent you a secure Link to safely change your password and keep you account protected",style: Theme.of(context).textTheme.labelMedium,textAlign: TextAlign.center),
@@ -43,8 +39,21 @@ class ResetPassword extends StatelessWidget {
 
                     SizedBox(
                       width: double.infinity,
+                      height: 40,
                       child: 
-                        ElevatedButton(onPressed: () => Navigator.of(context).pushNamed('/login'),child: const Text("Done")),),
+                        ElevatedButton(onPressed: () => Navigator.of(context).pushNamed('/login'),
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(Colors.blue),
+                            shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+
+                          ),
+                        child: const Text("Done",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,),),
+                        
+                        )),
                             
                     
                     const SizedBox(height: 6),

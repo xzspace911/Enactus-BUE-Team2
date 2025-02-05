@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:iconsax/iconsax.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -49,18 +49,20 @@ class LoginScreen extends StatelessWidget {
                       // Email Input
                       TextFormField(
                         decoration: const InputDecoration(
-                          prefixIcon: Icon(Icons.mail_lock),
+                          border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
+                          prefixIcon: Icon(Iconsax.personalcard),
                           labelText: "Email",
                         ),
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 8),
 
                       // Password Input
                       TextFormField(
                         decoration: const InputDecoration(
-                          prefixIcon: Icon(Icons.password),
+                          border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
+                          prefixIcon: Icon(Iconsax.password_check),
                           labelText: "Password",
-                          suffixIcon: Icon(Icons.remove_red_eye_rounded),
+                          suffixIcon: Icon(Iconsax.eye_slash),
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -77,7 +79,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () => Navigator.of(context).pushNamed('/forget_password'),
-                            child: const Text("Forget Password"),
+                            child: const Text("Forget Password ?"),
                           ),
                         ],
                       ),
@@ -86,9 +88,17 @@ class LoginScreen extends StatelessWidget {
                       // Sign In Button
                       SizedBox(
                         width: double.infinity,
+                        height: 38,
                         child: ElevatedButton(
                           onPressed: () => Navigator.of(context).pushNamed('/home_screen'),
-                          child: Text("Sign In"),
+                          style: ButtonStyle(
+                            backgroundColor: WidgetStateProperty.all(Colors.blue),
+                            shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+
+                          ),
+                          child: Text("Sign In",
+                            style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w400)
+                          ),
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -97,7 +107,12 @@ class LoginScreen extends StatelessWidget {
                         width: double.infinity,
                         child: OutlinedButton(
                           onPressed: () => Navigator.of(context).pushNamed('/sign_up'),
-                          child: Text("Create Account"),
+                          style: ButtonStyle(
+                            shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+                          ),
+                          child: Text("Create Account",
+                          
+                            ),
                         ),
                       ),
                       const SizedBox(height: 4),
