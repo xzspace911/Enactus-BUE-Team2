@@ -8,14 +8,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Car Shop'),
-        backgroundColor: Colors.blue[900],
-        centerTitle: true,
-        iconTheme: IconThemeData(color: Colors.white),
+        title: Text('AutoStore'),
+        automaticallyImplyLeading: false,
+        // backgroundColor: Colors.blue[900],
+        // centerTitle: true,
+        // iconTheme: IconThemeData(color: Colors.white),
         titleTextStyle: TextStyle(
-          color: Colors.white,
-          fontSize: 20,
-          fontFamily: 'PlayFair',
+          color: Colors.black,
+          fontSize: 22,
+          fontFamily: 'BebasNeue',
           fontWeight: FontWeight.w500,
           
         ),

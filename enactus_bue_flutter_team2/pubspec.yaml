@@ -52,7 +52,10 @@ flutter:
         
     - family: PlayFair
       fonts:
-        - asset: assets/fonts/PlayfairDisplay-VariableFont_wght.ttf
+        - asset: assets/fonts/PlayfairDisplay-VariableFont_wght.ttf     
+    - family: BebasNeue
+      fonts:
+        - asset: assets/fonts/BebasNeue-Regular.ttf
         
  
 

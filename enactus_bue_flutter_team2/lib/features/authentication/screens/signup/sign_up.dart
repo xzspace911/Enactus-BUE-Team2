@@ -32,9 +32,10 @@ class SignupScreen extends StatelessWidget {
                               child: TextFormField(
                                 expands : false,
                                 decoration: const InputDecoration(
-                                  border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
-                                  labelText: "First Name",
-                                  prefixIcon: Icon(Iconsax.user),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                                    labelText: "First Name",
+                                    prefixIcon: Icon(Iconsax.user),
                                 ),
                               ),
                             ),
