@@ -43,8 +43,8 @@ class ResetPassword extends StatelessWidget {
                       child: 
                         ElevatedButton(onPressed: () => Navigator.of(context).pushNamed('/login'),
                         style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(Colors.blue),
-                            shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+                            backgroundColor: WidgetStateProperty.all(Colors.blue),
+                            shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
 
                           ),
                         child: const Text("Done",
