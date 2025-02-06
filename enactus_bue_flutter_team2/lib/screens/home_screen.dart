@@ -11,12 +11,9 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('AutoStore'),
         automaticallyImplyLeading: false,
-        // backgroundColor: Colors.blue[900],
-        // centerTitle: true,
-        // iconTheme: IconThemeData(color: Colors.white),
         titleTextStyle: TextStyle(
           color: Colors.black,
-          fontSize: 22,
+          fontSize: 32,
           fontFamily: 'BebasNeue',
           fontWeight: FontWeight.w500,
           
@@ -24,30 +21,27 @@ class HomeScreen extends StatelessWidget {
       
       ),
       body: CarsGridItem(),
-      floatingActionButton: SizedBox(
-        height: 55,
-        width: 55,
-        child: FloatingActionButton(
-          
-          onPressed: () => Navigator.of(context).pushNamed('/login'),
-          backgroundColor: Colors.blue[900],
-          child: Icon(Iconsax.add_circle,
-          color: Colors.white,
-          ),
-          
+      floatingActionButton: FloatingActionButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+        onPressed: () => Navigator.of(context).pushNamed('/login'),
+        backgroundColor: Colors.blue[900],
+        child: Icon(Iconsax.add_circle,
+        color: Colors.white,
         ),
-        ),
+        
+      ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
         bottomNavigationBar: BottomAppBar(
-          shape: CircularNotchedRectangle(),height:65 ,
+          shape: CircularNotchedRectangle(),
+          height:65,
           child: Container(
             height: 30,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
-                  onPressed: () => Navigator.of(context).pushNamed('/home'),
+                  onPressed: () => Navigator.of(context).pushNamed('/home_screen'),
                   icon: Icon(Iconsax.home),
                   iconSize: 30,
                   color: Colors.blue[900],
@@ -59,13 +53,13 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.blue[900],
                 ),
                 IconButton(
-                  onPressed: () => Navigator.of(context).pushNamed('/profile'),
+                  onPressed: () => Navigator.of(context).pushNamed('/cart_page'),
                   icon: Icon(Iconsax.shopping_cart),
                   iconSize: 30,
                   color: Colors.blue[900],
                 ),
                 IconButton(
-                  onPressed: () => Navigator.of(context).pushNamed('/profile'),
+                  onPressed: () => Navigator.of(context).pushNamed('/login'),
                   icon: Icon(Iconsax.user),
                   iconSize: 30,
                   color: Colors.blue[900],

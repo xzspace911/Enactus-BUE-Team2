@@ -37,7 +37,6 @@ class CarsGridItem extends StatelessWidget {
                         tag: 15,
                         child: Image.asset(
                           cars["image"],
-                          //fit: BoxFit.cover,
                           height: 200,
                           width: 200,
                         ),
