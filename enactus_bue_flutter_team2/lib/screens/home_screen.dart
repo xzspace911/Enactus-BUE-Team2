@@ -1,5 +1,6 @@
 import 'package:enactus_bue_flutter_team2/screens/cars_grid_items/cars_grid_item.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,6 +24,58 @@ class HomeScreen extends StatelessWidget {
       
       ),
       body: CarsGridItem(),
-    );
+      floatingActionButton: SizedBox(
+        height: 55,
+        width: 55,
+        child: FloatingActionButton(
+          
+          onPressed: () => Navigator.of(context).pushNamed('/login'),
+          backgroundColor: Colors.blue[900],
+          child: Icon(Iconsax.add_circle,
+          color: Colors.white,
+          ),
+          
+        ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
+        bottomNavigationBar: BottomAppBar(
+          shape: CircularNotchedRectangle(),height:65 ,
+          child: Container(
+            height: 30,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  onPressed: () => Navigator.of(context).pushNamed('/home'),
+                  icon: Icon(Iconsax.home),
+                  iconSize: 30,
+                  color: Colors.blue[900],
+                ),
+                IconButton(
+                  onPressed: () => Navigator.of(context).pushNamed('/profile'),
+                  icon: Icon(Iconsax.search_favorite),
+                  iconSize: 30,
+                  color: Colors.blue[900],
+                ),
+                IconButton(
+                  onPressed: () => Navigator.of(context).pushNamed('/profile'),
+                  icon: Icon(Iconsax.shopping_cart),
+                  iconSize: 30,
+                  color: Colors.blue[900],
+                ),
+                IconButton(
+                  onPressed: () => Navigator.of(context).pushNamed('/profile'),
+                  icon: Icon(Iconsax.user),
+                  iconSize: 30,
+                  color: Colors.blue[900],
+                ),
+              ],
+            ),
+          ),
+        ),
+        
+      );
+    
   }
 }

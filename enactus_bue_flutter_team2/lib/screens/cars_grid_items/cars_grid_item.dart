@@ -1,6 +1,5 @@
 import 'package:enactus_bue_flutter_team2/screens/cars_grid_items/cars_card_details.dart';
 import 'package:flutter/material.dart';
-
 import 'cars_details_list.dart';
 
 class CarsGridItem extends StatelessWidget {
@@ -63,6 +62,7 @@ class CarsGridItem extends StatelessWidget {
                     ),
                     SizedBox(height: 10), 
                   ],
+                  
                 ),
               ),
             ),
