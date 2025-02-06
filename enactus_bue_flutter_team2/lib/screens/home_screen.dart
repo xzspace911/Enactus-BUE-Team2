@@ -9,6 +9,17 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          Container(
+            margin: EdgeInsets.only(right: 10),
+            child: IconButton(
+              onPressed: () => Navigator.of(context).pushNamed('/cart_page'),
+              icon: Icon(Iconsax.search_favorite),
+              iconSize: 30,
+              color: Colors.blue[900],
+            ),
+          ),
+        ],
         title: Text('AutoStore'),
         automaticallyImplyLeading: false,
         titleTextStyle: TextStyle(
@@ -48,7 +59,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () => Navigator.of(context).pushNamed('/profile'),
-                  icon: Icon(Iconsax.search_favorite),
+                  icon: Icon(Iconsax.car),
                   iconSize: 30,
                   color: Colors.blue[900],
                 ),
@@ -59,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.blue[900],
                 ),
                 IconButton(
-                  onPressed: () => Navigator.of(context).pushNamed('/login'),
+                  onPressed: () => Navigator.of(context).pushNamed('/profile_page'),
                   icon: Icon(Iconsax.user),
                   iconSize: 30,
                   color: Colors.blue[900],

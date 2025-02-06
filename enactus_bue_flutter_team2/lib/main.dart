@@ -5,6 +5,7 @@ import 'package:enactus_bue_flutter_team2/features/authentication/screens/signup
 import 'package:enactus_bue_flutter_team2/screens/cart/cart_page.dart';
 import 'package:enactus_bue_flutter_team2/screens/home_screen.dart';
 import 'package:enactus_bue_flutter_team2/screens/onboarding/on_boarding_screen.dart';
+import 'package:enactus_bue_flutter_team2/screens/profile_pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         '/home_screen' : (context)=> HomeScreen(),
         '/reset_password' : (context)=> ResetPassword(),
         '/cart_page' : (context)=> CartPage(),
+        '/profile_page' : (context)=> ProfilePage(),
       },
       
     );
