@@ -56,6 +56,10 @@ flutter:
     - family: BebasNeue
       fonts:
         - asset: assets/fonts/BebasNeue-Regular.ttf
+
+    - family: Coolvetica
+      fonts:
+        - asset: assets/fonts/Coolvetica_Rg.otf
         
  
 

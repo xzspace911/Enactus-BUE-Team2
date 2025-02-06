@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:iconsax/iconsax.dart';
 class CarCardDetails extends StatelessWidget {
   final String carName;
   final String carDetails;
@@ -16,7 +16,14 @@ class CarCardDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text(carName),
+        titleTextStyle: TextStyle(
+          color: Colors.black,
+          fontSize: 26,
+          fontFamily: 'BebasNeue',
+          fontWeight: FontWeight.w500,
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -46,7 +53,7 @@ class CarCardDetails extends StatelessWidget {
               width: 350,
               height: 50,
               child: ElevatedButton(
-                onPressed: () => Navigator.of(context).pushNamed('/cart'),
+                onPressed: () => Navigator.of(context).pushNamed('/cart_page'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue[900],
                   shape: RoundedRectangleBorder(
@@ -57,7 +64,6 @@ class CarCardDetails extends StatelessWidget {
                   'Add to Cart',
                   style: TextStyle(
                     color: Colors.white,
-                    fontFamily: 'PlayFair',
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -68,33 +74,42 @@ class CarCardDetails extends StatelessWidget {
         ),
       ),
       
-      bottomNavigationBar: NavigationBar(
-        height: 60,
-        backgroundColor: Theme.of(context).colorScheme.surface,
-        indicatorColor: Theme.of(context).colorScheme.primary.withOpacity(0.2),
-        destinations: const [
-          NavigationDestination(
-            selectedIcon: Icon(Icons.home_filled),
-            icon: Icon(Icons.home_outlined),
-            label: 'Home',
+      bottomNavigationBar: BottomAppBar(
+          shape: CircularNotchedRectangle(),
+          height:65,
+          child: Container(
+            height: 30,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  onPressed: () => Navigator.of(context).pushNamed('/home_screen'),
+                  icon: Icon(Iconsax.home),
+                  iconSize: 30,
+                  color: Colors.blue[900],
+                ),
+                IconButton(
+                  onPressed: () => Navigator.of(context).pushNamed('/profile'),
+                  icon: Icon(Iconsax.search_favorite),
+                  iconSize: 30,
+                  color: Colors.blue[900],
+                ),
+                IconButton(
+                  onPressed: () => Navigator.of(context).pushNamed('/cart_page'),
+                  icon: Icon(Iconsax.shopping_cart),
+                  iconSize: 30,
+                  color: Colors.blue[900],
+                ),
+                IconButton(
+                  onPressed: () => Navigator.of(context).pushNamed('/login'),
+                  icon: Icon(Iconsax.user),
+                  iconSize: 30,
+                  color: Colors.blue[900],
+                ),
+              ],
+            ),
           ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.search),
-            icon: Icon(Icons.search_outlined),
-            label: 'Search',
-          ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.shopping_cart),
-            icon: Icon(Icons.shopping_cart_outlined),
-            label: 'Cart',
-          ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.person),
-            icon: Icon(Icons.person_outline),
-            label: 'Profile',
-          ),
-        ],
-      ),
+        ),
     );
   }
 }

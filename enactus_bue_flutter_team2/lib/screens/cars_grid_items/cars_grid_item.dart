@@ -48,16 +48,28 @@ class CarsGridItem extends StatelessWidget {
                         cars["name"],
                         style: TextStyle(
                             fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Kanit'),
+                            fontWeight: FontWeight.w500,
+                            fontFamily: 'Coolvetica'),
                       ),
                     ),
-                    Text(
-                      "\$${cars["price"]}",
-                      style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.blue[900],
-                          fontFamily: 'Kanit'),
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 30),
+                      height: 28,
+                      width: double.infinity,
+                      decoration: 
+                      BoxDecoration(
+                        color: Colors.blue[900],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "${cars["price"]} \$",
+                          style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                              ),
+                        ),
+                      ),
                     ),
                     SizedBox(height: 10), 
                   ],
