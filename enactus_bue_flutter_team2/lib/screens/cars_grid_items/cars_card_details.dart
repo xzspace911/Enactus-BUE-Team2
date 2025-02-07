@@ -48,14 +48,22 @@ class CarCardDetails extends StatelessWidget {
                 ),
               ),
             ),
-            const Spacer(), // Pushes the button to the bottom
-            SizedBox(
+            const Spacer(), 
+            Container(
               width: 350,
               height: 50,
+              decoration: BoxDecoration(
+              gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Colors.blue, Colors.purple],
+            ),
+            borderRadius: BorderRadius.circular(15),
+          ),
               child: ElevatedButton(
                 onPressed: () => Navigator.of(context).pushNamed('/cart_page'),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue[900],
+                  backgroundColor: Colors.transparent,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -77,7 +85,7 @@ class CarCardDetails extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
           shape: CircularNotchedRectangle(),
           height:65,
-          child: Container(
+          child: SizedBox(
             height: 30,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -101,7 +109,7 @@ class CarCardDetails extends StatelessWidget {
                   color: Colors.blue[900],
                 ),
                 IconButton(
-                  onPressed: () => Navigator.of(context).pushNamed('/login'),
+                  onPressed: () => Navigator.of(context).pushNamed('/profile_page'),
                   icon: Icon(Iconsax.user),
                   iconSize: 30,
                   color: Colors.blue[900],

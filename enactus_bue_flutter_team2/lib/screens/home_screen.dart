@@ -32,14 +32,25 @@ class HomeScreen extends StatelessWidget {
       
       ),
       body: CarsGridItem(),
-      floatingActionButton: FloatingActionButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-        onPressed: () => Navigator.of(context).pushNamed('/login'),
-        backgroundColor: Colors.blue[900],
-        child: Icon(Iconsax.add_circle,
-        color: Colors.white,
+      floatingActionButton: Container(
+        decoration: BoxDecoration(
+              gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Colors.blue, Colors.purple],
+              ),
+              borderRadius: BorderRadius.circular(50),
+              
         ),
-        
+        child: FloatingActionButton(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+          onPressed: () => Navigator.of(context).pushNamed('/login'),
+          backgroundColor: Colors.transparent,
+          child: Icon(Iconsax.add_circle,
+          color: Colors.white,
+          ),
+          
+        ),
       ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 

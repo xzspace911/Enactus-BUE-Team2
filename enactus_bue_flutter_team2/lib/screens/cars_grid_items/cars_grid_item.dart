@@ -58,7 +58,11 @@ class CarsGridItem extends StatelessWidget {
                       width: double.infinity,
                       decoration: 
                       BoxDecoration(
-                        color: Colors.blue[900],
+                        gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [Colors.blue, Colors.purple],
+                        ),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(
