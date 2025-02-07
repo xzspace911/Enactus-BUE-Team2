@@ -137,31 +137,47 @@ class SignupScreen extends StatelessWidget {
                           ],
                         ),
                         ///Sign up button
-                        const SizedBox(height: 80),
+                        const SizedBox(height: 40),
                       ],
                     ),
                 ),
+                Container(
+                  width: double.infinity,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [Colors.blue, Colors.purple],
+                    ),
+                  ),
+                  child: ElevatedButton(
+                    onPressed: () => Navigator.of(context).pushNamed('/login'),
+                    style: ElevatedButton.styleFrom(
+                      elevation: 30,
+                      backgroundColor: Colors.transparent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    child: Text(
+                      'Sign Up',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w300,
+                        fontFamily: "Coolvetica",
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
         ),
       ),
-      floatingActionButton: SizedBox(
-        
-        width: 350,
-        height: 60,
-        
-        child: FloatingActionButton(
-          onPressed: (){},
-            child: Text("Sign up",
-              style: TextStyle(
-                fontSize: 18,
-                fontFamily: 'Coolvetica',
-                fontWeight: FontWeight.w100,
-              ),
-            ),
-            ),
-      ),
-            floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      
+            
             
       );
   }

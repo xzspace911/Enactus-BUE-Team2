@@ -8,7 +8,7 @@ class ForgetPassword extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body:   Padding(padding:
-       EdgeInsets.all(24),
+       EdgeInsets.only(top: 8, left: 35, right: 35),
        child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -41,19 +41,32 @@ class ForgetPassword extends StatelessWidget {
 
           
           ///   Submit button
-          SizedBox(
+          Container(
             width: double.infinity,
+            height: 40,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Colors.blue, Colors.purple],
+              ),
+              borderRadius: BorderRadius.circular(10),
+            ),
             child: ElevatedButton(onPressed: ()=> Navigator.of(context).pushNamed('/reset_password'),
             style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all(Colors.blue),
+                            backgroundColor: WidgetStateProperty.all(Colors.transparent),
                             shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
 
                           ),
              child:const Text("Submit",
               style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-                color: Colors.white,),
+                fontSize: 16,
+                fontWeight: FontWeight.w300,
+                color: Colors.white,
+                fontFamily: "Coolvetica",
+                
+                
+                ),
              ),
               
              ),

@@ -105,8 +105,14 @@ class LoginScreen extends StatelessWidget {
                             shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
 
                           ),
-                          child: Text("Sign In",
-                            style: TextStyle(color: Colors.white, fontSize: 16,fontFamily: "Coolvetica", fontWeight: FontWeight.w400)
+                          child:
+                           Text("Login",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontFamily: "Coolvetica",
+                                fontWeight: FontWeight.w300,
+                              ),
                           ),
                         ),
                       ),

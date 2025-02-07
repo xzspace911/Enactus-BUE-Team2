@@ -8,6 +8,7 @@ class ResetPassword extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
@@ -37,21 +38,32 @@ class ResetPassword extends StatelessWidget {
 
                     //=================Buttons====================//
 
-                    SizedBox(
+                    Container(
                       width: double.infinity,
                       height: 40,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [Colors.blue, Colors.purple],
+                          ),
+                      ),
                       child: 
                         ElevatedButton(onPressed: () => Navigator.of(context).pushNamed('/login'),
                         style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all(Colors.blue),
+                            backgroundColor: WidgetStateProperty.all(Colors.transparent),
                             shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
 
                           ),
                         child: const Text("Done",
                           style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white,),),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                            fontFamily: "Coolvetica",
+                            
+                            ),),
                         
                         )),
                             
