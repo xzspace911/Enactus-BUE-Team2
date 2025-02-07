@@ -57,34 +57,78 @@ class HomeScreen extends StatelessWidget {
         bottomNavigationBar: BottomAppBar(
           shape: CircularNotchedRectangle(),
           height:65,
-          child: Container(
+          child: SizedBox(
             height: 30,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                IconButton(
-                  onPressed: () => Navigator.of(context).pushNamed('/home_screen'),
-                  icon: Icon(Iconsax.home),
-                  iconSize: 30,
-                  color: Colors.blue[900],
+                ShaderMask(
+                  blendMode: BlendMode.srcIn,
+                  shaderCallback:(Rect bounds) => RadialGradient(
+                  center: Alignment.topCenter,
+                  stops: [.5, 1],
+                  colors: [
+                    Colors.blue,
+                    Colors.purple,
+                  ],
+                ).createShader(bounds),
+                  child: IconButton(
+                    onPressed: () => Navigator.of(context).pushNamed('/home_screen'),
+                    icon: Icon(Iconsax.home),
+                    iconSize: 30,
+                    color: Colors.blue[900],
+                  ),
                 ),
-                IconButton(
-                  onPressed: () => Navigator.of(context).pushNamed('/profile'),
-                  icon: Icon(Iconsax.car),
-                  iconSize: 30,
-                  color: Colors.blue[900],
+                ShaderMask(
+                  blendMode: BlendMode.srcIn,
+                  shaderCallback:(Rect bounds) => RadialGradient(
+                  center: Alignment.topCenter,
+                  stops: [.5, 1],
+                  colors: [
+                    Colors.blue,
+                    Colors.purple,
+                  ],
+                ).createShader(bounds),
+                  child: IconButton(
+                    onPressed: () => Navigator.of(context).pushNamed('/profile'),
+                    icon: Icon(Iconsax.car),
+                    iconSize: 30,
+                    color: Colors.blue[900],
+                  ),
                 ),
-                IconButton(
-                  onPressed: () => Navigator.of(context).pushNamed('/cart_page'),
-                  icon: Icon(Iconsax.shopping_cart),
-                  iconSize: 30,
-                  color: Colors.blue[900],
+                ShaderMask(
+                  blendMode: BlendMode.srcIn,
+                  shaderCallback:(Rect bounds) => RadialGradient(
+                  center: Alignment.topCenter,
+                  stops: [.5, 1],
+                  colors: [
+                    Colors.blue,
+                    Colors.purple,
+                  ],
+                ).createShader(bounds),
+                  child: IconButton(
+                    onPressed: () => Navigator.of(context).pushNamed('/cart_page'),
+                    icon: Icon(Iconsax.shopping_cart),
+                    iconSize: 30,
+                    color: Colors.blue[900],
+                  ),
                 ),
-                IconButton(
-                  onPressed: () => Navigator.of(context).pushNamed('/profile_page'),
-                  icon: Icon(Iconsax.user),
-                  iconSize: 30,
-                  color: Colors.blue[900],
+                ShaderMask(
+                  blendMode: BlendMode.srcIn,
+                  shaderCallback:(Rect bounds) => RadialGradient(
+                  center: Alignment.topCenter,
+                  stops: [.5, 1],
+                  colors: [
+                    Colors.blue,
+                    Colors.purple,
+                  ],
+                ).createShader(bounds),
+                  child: IconButton(
+                    onPressed: () => Navigator.of(context).pushNamed('/profile_page'),
+                    icon: Icon(Iconsax.user),
+                    iconSize: 30,
+                    color: Colors.blue[900],
+                  ),
                 ),
               ],
             ),
