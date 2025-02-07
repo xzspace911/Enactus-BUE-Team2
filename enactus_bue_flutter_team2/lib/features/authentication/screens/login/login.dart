@@ -7,9 +7,10 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(40),
+          padding: EdgeInsets.only(top: 12, left: 40, right: 40),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -22,11 +23,11 @@ class LoginScreen extends StatelessWidget {
                     child:
                       Image(
                         height: 150,
-                        
-                        image: AssetImage('assets/icons/logo.png'),
+                        width: 150,
+                        image: AssetImage('assets/icons/supercar.gif'),
                       ),
                   ),
-                  SizedBox(height: 12,),
+                  SizedBox(height: 4,),
                   
                   Text(
                     "Welcome Back",
@@ -39,7 +40,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ],
               ),
-
+              SizedBox(height: 12,),
               // Login Form
               Form(
                 child: Padding(
@@ -86,13 +87,21 @@ class LoginScreen extends StatelessWidget {
                       const SizedBox(height: 32),
 
                       // Sign In Button
-                      SizedBox(
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [Colors.blue, Colors.purple],
+                          ),
+                        ),
                         width: double.infinity,
                         height: 38,
                         child: ElevatedButton(
                           onPressed: () => Navigator.of(context).pushNamed('/home_screen'),
                           style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all(Colors.blue),
+                            backgroundColor: WidgetStateProperty.all(Colors.transparent),
                             shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
 
                           ),
@@ -120,7 +129,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-
+              SizedBox(height: 16,),
               // Divider with "Or Sign in with"
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -133,6 +142,7 @@ class LoginScreen extends StatelessWidget {
                       endIndent: 5,
                     ),
                   ),
+                  
                   Text(
                     "or Sign In With",
                     style: Theme.of(context).textTheme.labelMedium,

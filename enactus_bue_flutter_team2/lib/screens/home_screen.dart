@@ -12,11 +12,22 @@ class HomeScreen extends StatelessWidget {
         actions: [
           Container(
             margin: EdgeInsets.only(right: 10),
-            child: IconButton(
-              onPressed: () => Navigator.of(context).pushNamed('/cart_page'),
-              icon: Icon(Iconsax.search_favorite),
-              iconSize: 30,
-              color: Colors.blue[900],
+            child: ShaderMask(
+              blendMode: BlendMode.srcIn,
+              shaderCallback:(Rect bounds) => RadialGradient(
+              center: Alignment.topCenter,
+              stops: [.5, 1],
+              colors: [
+                Colors.blue,
+                Colors.purple,
+              ],
+            ).createShader(bounds),
+              child: IconButton(
+                onPressed: () => Navigator.of(context).pushNamed('/cart_page'),
+                icon: Icon(Iconsax.search_favorite),
+                iconSize: 30,
+                color: Colors.blue[900],
+              ),
             ),
           ),
         ],

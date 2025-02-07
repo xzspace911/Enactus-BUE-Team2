@@ -17,6 +17,12 @@ class CarCardDetails extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        
+        leading: 
+          IconButton(onPressed: () => Navigator.of(context).pop(),
+           icon: Icon(Iconsax.arrow_left_2)
+           ),
+        
         title: Text(carName),
         titleTextStyle: TextStyle(
           color: Colors.black,
