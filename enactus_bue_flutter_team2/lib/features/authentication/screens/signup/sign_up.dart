@@ -51,13 +51,9 @@ class SignupScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
-
-
-
                           ],
-
                         ),
-                        const SizedBox(height: 8),
+                        const SizedBox(height: 12),
                         //=============== UserName =======================
                         TextFormField(
                           expands : false,
@@ -68,7 +64,7 @@ class SignupScreen extends StatelessWidget {
                           ),
                         ),
                         //=============== Mail =======================
-                        const SizedBox(height: 8),
+                        const SizedBox(height: 12),
                         TextFormField(
                           expands : false,
                           decoration: const InputDecoration(
@@ -78,7 +74,7 @@ class SignupScreen extends StatelessWidget {
                           ),
                         ),
                         //=============== Phone =======================
-                        const SizedBox(height: 8),
+                        const SizedBox(height: 12),
                         TextFormField(
                           expands : false,
                           decoration: const InputDecoration(
@@ -88,7 +84,7 @@ class SignupScreen extends StatelessWidget {
                           ),
                         ),
                         //=============== Password =======================
-                        const SizedBox(height: 8),
+                        const SizedBox(height: 12),
                         TextFormField(
                           expands : false,
                           decoration: const InputDecoration(
@@ -108,12 +104,12 @@ class SignupScreen extends StatelessWidget {
                                 height: 24,
                                 child:
                                   Checkbox(value: true, onChanged: (value){})),
-                            const SizedBox(width: 8),
-                            Text.rich(TextSpan(
-                              children: [
-                                TextSpan(text: '${"I Agree to"}  ',
-                                  style: Theme.of(context).textTheme.bodySmall,
-                                ),
+                                  const SizedBox(width: 8),
+                                  Text.rich(TextSpan(
+                                    children: [
+                                      TextSpan(text: '${"I Agree to"}  ',
+                                        style: Theme.of(context).textTheme.bodySmall,
+                                    ),
 
                                 TextSpan(text: '${"privacyPolicy"}  ',
                                   style: Theme.of(context).textTheme.bodyMedium!.apply(
@@ -141,35 +137,32 @@ class SignupScreen extends StatelessWidget {
                           ],
                         ),
                         ///Sign up button
-                        const SizedBox(height: 30),
-                        SizedBox(
-                          width: double.infinity,
-                          height: 45,
-                        
-                         child: ElevatedButton(
-                            onPressed: ()=>{},
-                            style: ButtonStyle(
-                              backgroundColor: WidgetStateProperty.all(Colors.blue),
-                              shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
-                            ),
-                            child: const Text("Create Account",
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),),
-                            
-                            )),
-                        const SizedBox(height: 8),
-                        /// Divider
-
-                        
-
-
+                        const SizedBox(height: 80),
                       ],
                     ),
                 ),
               ],
             ),
         ),
-      ));
+      ),
+      floatingActionButton: SizedBox(
+        
+        width: 350,
+        height: 60,
+        
+        child: FloatingActionButton(
+          onPressed: (){},
+            child: Text("Sign up",
+              style: TextStyle(
+                fontSize: 18,
+                fontFamily: 'Coolvetica',
+                fontWeight: FontWeight.w100,
+              ),
+            ),
+            ),
+      ),
+            floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+            
+      );
   }
 }

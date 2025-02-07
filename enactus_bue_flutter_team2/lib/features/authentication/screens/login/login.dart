@@ -106,7 +106,7 @@ class LoginScreen extends StatelessWidget {
 
                           ),
                           child: Text("Sign In",
-                            style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w400)
+                            style: TextStyle(color: Colors.white, fontSize: 16,fontFamily: "Coolvetica", fontWeight: FontWeight.w400)
                           ),
                         ),
                       ),
@@ -114,13 +114,17 @@ class LoginScreen extends StatelessWidget {
                       // Create Account Button
                       SizedBox(
                         width: double.infinity,
+                        height: 38,
                         child: OutlinedButton(
                           onPressed: () => Navigator.of(context).pushNamed('/sign_up'),
                           style: ButtonStyle(
                             shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
                           ),
                           child: Text("Create Account",
-                          
+                          style: TextStyle(
+                            fontFamily: "Coolvetica",
+                            fontSize: 15,
+                          ),
                             ),
                         ),
                       ),
