@@ -10,7 +10,7 @@ class LoginScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(top: 12, left: 40, right: 40),
+          padding: EdgeInsets.only(top: 70, left: 30, right: 30),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -27,7 +27,7 @@ class LoginScreen extends StatelessWidget {
                         image: AssetImage('assets/icons/supercar.gif'),
                       ),
                   ),
-                  SizedBox(height: 4,),
+                  SizedBox(height: 2,),
                   
                   Text(
                     "Welcome Back",

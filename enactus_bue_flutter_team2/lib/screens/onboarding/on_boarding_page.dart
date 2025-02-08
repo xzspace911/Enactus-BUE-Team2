@@ -7,7 +7,7 @@ class OnBoardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(24),
+      padding: const EdgeInsets.only(top:90 , bottom: 24 , left: 24 , right: 24 , ),
       child: Column(
         children: [
           Image(
