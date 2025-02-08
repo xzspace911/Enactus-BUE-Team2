@@ -8,143 +8,118 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          Container(
-            margin: EdgeInsets.only(right: 10),
-            child: ShaderMask(
-              blendMode: BlendMode.srcIn,
-              shaderCallback:(Rect bounds) => RadialGradient(
-              center: Alignment.topCenter,
-              stops: [.5, 1],
-              colors: [
-                Colors.blue,
-                Colors.purple,
-              ],
-            ).createShader(bounds),
-              child: IconButton(
-                onPressed: () => Navigator.of(context).pushNamed('/on_boarding_screen'),
-                icon: Icon(Iconsax.search_favorite),
-                iconSize: 30,
-                color: Colors.blue[900],
+      body: Column(
+        children: [
+           Expanded(
+            child: Stack(
+            children :[
+              Container(
+                color: const Color.fromARGB(255, 247, 247, 247),
               ),
+              Container(
+                height: 200,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(40),
+                    bottomRight: Radius.circular(40),
+                  ),
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.blue,
+                      Colors.purple,
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(5, 5), 
+                        blurRadius: 6.0,
+                      ),
+                    ], 
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("AutoStore",
+                            style: TextStyle(
+                              fontFamily: "BebasNeue",
+                              fontSize: 30,
+                              color: Colors.white,
+                            ),
+                            ),
+                            Container(
+                              height: 45,
+                              width: 300,
+                              decoration: 
+                              BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Colors.white.withOpacity(0.2),
+                              ),
+                              child: TextField( 
+                                style: TextStyle(
+                                  color: Colors.purple,
+                                  
+                                ),
+                                decoration: InputDecoration(
+                                  hintText: "Search",
+                                  hintStyle: TextStyle(
+                                    color: Colors.purple,
+                                  ),
+                                  
+                                  suffixIcon: Icon(Iconsax.search_favorite),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: BorderSide.none,
+                                  ),
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                ),
+                                
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                  ],
+                ),
+              ),
+              Positioned(
+                bottom: 450.0,
+                top: 100.0,
+                left: 80,
+                width: 340,
+                child: Container(
+                          height: 100,
+                          width: 300,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: Colors.white,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Image(image: AssetImage("assets/images/1.png"))
+                            ],
+                          ),
+                        ),
+              ),
+            
+            ] 
             ),
           ),
         ],
-        title: Text('AutoStore'),
-        automaticallyImplyLeading: false,
-        titleTextStyle: TextStyle(
-          color: Colors.black,
-          fontSize: 32,
-          fontFamily: 'BebasNeue',
-          fontWeight: FontWeight.w500,
-          
-        ),
-      
       ),
-      body: CarsGridItem(),
-      floatingActionButton: Container(
-        decoration: BoxDecoration(
-              gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [Colors.blue, Colors.purple],
-              ),
-              borderRadius: BorderRadius.circular(50),
-              
-        ),
-        child: FloatingActionButton(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-          onPressed: () => Navigator.of(context).pushNamed('/login'),
-          backgroundColor: Colors.transparent,
-          child: Icon(Iconsax.add_circle,
-          color: Colors.white,
-          ),
-          
-        ),
-      ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-
-        bottomNavigationBar: BottomAppBar(
-          shape: CircularNotchedRectangle(),
-          height:65,
-          child: SizedBox(
-            height: 30,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ShaderMask(
-                  blendMode: BlendMode.srcIn,
-                  shaderCallback:(Rect bounds) => RadialGradient(
-                  center: Alignment.topCenter,
-                  stops: [.5, 1],
-                  colors: [
-                    Colors.blue,
-                    Colors.purple,
-                  ],
-                ).createShader(bounds),
-                  child: IconButton(
-                    onPressed: () => Navigator.of(context).pushNamed('/home_screen'),
-                    icon: Icon(Iconsax.home),
-                    iconSize: 30,
-                    color: Colors.blue[900],
-                  ),
-                ),
-                ShaderMask(
-                  blendMode: BlendMode.srcIn,
-                  shaderCallback:(Rect bounds) => RadialGradient(
-                  center: Alignment.topCenter,
-                  stops: [.5, 1],
-                  colors: [
-                    Colors.blue,
-                    Colors.purple,
-                  ],
-                ).createShader(bounds),
-                  child: IconButton(
-                    onPressed: () => Navigator.of(context).pushNamed('/profile'),
-                    icon: Icon(Iconsax.car),
-                    iconSize: 30,
-                    color: Colors.blue[900],
-                  ),
-                ),
-                ShaderMask(
-                  blendMode: BlendMode.srcIn,
-                  shaderCallback:(Rect bounds) => RadialGradient(
-                  center: Alignment.topCenter,
-                  stops: [.5, 1],
-                  colors: [
-                    Colors.blue,
-                    Colors.purple,
-                  ],
-                ).createShader(bounds),
-                  child: IconButton(
-                    onPressed: () => Navigator.of(context).pushNamed('/cart_page'),
-                    icon: Icon(Iconsax.shopping_cart),
-                    iconSize: 30,
-                    color: Colors.blue[900],
-                  ),
-                ),
-                ShaderMask(
-                  blendMode: BlendMode.srcIn,
-                  shaderCallback:(Rect bounds) => RadialGradient(
-                  center: Alignment.topCenter,
-                  stops: [.5, 1],
-                  colors: [
-                    Colors.blue,
-                    Colors.purple,
-                  ],
-                ).createShader(bounds),
-                  child: IconButton(
-                    onPressed: () => Navigator.of(context).pushNamed('/profile_page'),
-                    icon: Icon(Iconsax.user),
-                    iconSize: 30,
-                    color: Colors.blue[900],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
         
       );
     
