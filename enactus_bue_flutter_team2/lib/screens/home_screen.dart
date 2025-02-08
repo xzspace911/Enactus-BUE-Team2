@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ).createShader(bounds),
               child: IconButton(
-                onPressed: () => Navigator.of(context).pushNamed('/cart_page'),
+                onPressed: () => Navigator.of(context).pushNamed('/on_boarding_screen'),
                 icon: Icon(Iconsax.search_favorite),
                 iconSize: 30,
                 color: Colors.blue[900],

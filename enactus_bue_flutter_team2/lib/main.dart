@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/reset_password' : (context)=> ResetPassword(),
         '/cart_page' : (context)=> CartPage(),
         '/profile_page' : (context)=> ProfilePage(),
+        '/on_boarding_screen' : (context)=> OnBoardingScreen(),
       },
       
     );
