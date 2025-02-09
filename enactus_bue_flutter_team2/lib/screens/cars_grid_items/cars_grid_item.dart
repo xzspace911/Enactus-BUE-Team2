@@ -11,7 +11,7 @@ class CarsGridItem extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: GridView.count(
         crossAxisCount: 8,
-        crossAxisSpacing: 1,
+        crossAxisSpacing: 2,
         mainAxisSpacing: 10,
         childAspectRatio: 0.94,
         padding: EdgeInsets.all(8),
