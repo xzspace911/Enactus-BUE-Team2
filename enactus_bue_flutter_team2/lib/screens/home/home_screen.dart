@@ -1,7 +1,7 @@
-import 'package:enactus_bue_flutter_team2/screens/widgets/card_list_view.dart';
+import 'package:enactus_bue_flutter_team2/screens/cars_grid_items/card_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'cars_grid_items/cars_details_list.dart';
+import '../cars_grid_items/cars_details_list.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -42,56 +42,58 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                              top: 40, left: 20, right: 20),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "AutoStore",
-                                style: TextStyle(
-                                  fontFamily: "BebasNeue",
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Container(
-                                height: 45,
-                                width: 210,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Colors.white.withOpacity(0.2),
-                                ),
-                                child: TextField(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                top: 40, left: 20, right: 20),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "AutoStore",
                                   style: TextStyle(
-                                    color: Colors.purple,
+                                    fontFamily: "BebasNeue",
+                                    fontSize: 30,
+                                    color: Colors.white,
                                   ),
-                                  decoration: InputDecoration(
-                                    hintText: "Search",
-                                    hintStyle: TextStyle(
+                                ),
+                                Container(
+                                  height: 45,
+                                  width: 210,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.white.withOpacity(0.2),
+                                  ),
+                                  child: TextField(
+                                    style: TextStyle(
                                       color: Colors.purple,
                                     ),
-                                    suffixIcon: Icon(Iconsax.search_favorite),
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                      borderSide: BorderSide.none,
+                                    decoration: InputDecoration(
+                                      hintText: "Search",
+                                      hintStyle: TextStyle(
+                                        color: Colors.purple,
+                                      ),
+                                      suffixIcon: Icon(Iconsax.search_favorite),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                        borderSide: BorderSide.none,
+                                      ),
+                                      filled: true,
+                                      fillColor: Colors.white,
                                     ),
-                                    filled: true,
-                                    fillColor: Colors.white,
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(height: 20),
-                    ],
+                        SizedBox(height: 20),
+                      ],
+                    ),
                   ),
                 ),
                 Padding(
