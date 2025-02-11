@@ -179,7 +179,7 @@ class HomeScreen extends StatelessWidget {
                                           255, 247, 215, 244),
                                     ),
                                     child: IconButton(
-                                        onPressed: () {},
+                                        onPressed: () => Navigator.of(context).pushNamed('/category_page'),
                                         icon: Icon(Iconsax.category))),
                                 SizedBox(
                                   height: 4,

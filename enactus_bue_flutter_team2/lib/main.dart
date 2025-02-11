@@ -4,6 +4,7 @@ import 'package:enactus_bue_flutter_team2/features/authentication/screens/login/
 import 'package:enactus_bue_flutter_team2/features/authentication/screens/signup/sign_up.dart';
 import 'package:enactus_bue_flutter_team2/screens/cars_grid_items/cars_grid_item.dart';
 import 'package:enactus_bue_flutter_team2/screens/cart/cart_page.dart';
+import 'package:enactus_bue_flutter_team2/screens/home/category/category_page.dart';
 import 'package:enactus_bue_flutter_team2/screens/home/home_screen.dart';
 import 'package:enactus_bue_flutter_team2/screens/onboarding/on_boarding_screen.dart';
 import 'package:enactus_bue_flutter_team2/screens/profile_pages/profile_page.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/profile_page' : (context)=> ProfilePage(),
         '/on_boarding_screen' : (context)=> OnBoardingScreen(),
         '/cars_grid_item' : (context)=> CarsGridItem(),
+        '/category_page' : (context)=> CategoryPage(),
       },
       
     );
