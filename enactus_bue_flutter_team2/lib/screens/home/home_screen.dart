@@ -301,7 +301,7 @@ class HomeScreen extends StatelessWidget {
         child: FloatingActionButton(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-          onPressed: () => Navigator.of(context).pushNamed('/login'),
+          onPressed: () => Navigator.of(context).pushNamed('/adding_screen'),
           backgroundColor: Colors.transparent,
           child: Icon(
             Iconsax.add_circle,
